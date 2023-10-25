@@ -8,6 +8,7 @@ import {
   faBars,
 } from "@fortawesome/free-solid-svg-icons";
 import { faShareFromSquare } from "@fortawesome/free-regular-svg-icons";
+import { MHeader } from "./MHeader";
 
 const Body = styled.body`
   width: 100%;
@@ -122,7 +123,7 @@ const Time = styled.div`
 `;
 const Section03 = styled.div`
   width: 100%;
-  background-color: aliceblue;
+  /* background-color: aliceblue; */
   padding: 10px;
 `;
 const MenuControl = styled.div``;
@@ -134,14 +135,7 @@ export const MusicApp = () => {
     <div>
       <Body>
         <MBox>
-          <Header>
-            <Down>
-              <FontAwesomeIcon icon={faAngleLeft}></FontAwesomeIcon>
-            </Down>
-            <Menu>
-              <FontAwesomeIcon icon={faBars}></FontAwesomeIcon>
-            </Menu>
-          </Header>
+          <MHeader />
 
           <Section01>
             <Img></Img>
@@ -163,7 +157,7 @@ export const MusicApp = () => {
 
           <Section03>
             <MenuControl>
-              <FontAwesomeIcon icon={faShuff}></FontAwesomeIcon>
+              {/* <FontAwesomeIcon icon={faShuff}></FontAwesomeIcon> */}
             </MenuControl>
           </Section03>
 

@@ -1,11 +1,9 @@
-// import { IconEx } from "./components/IconEx";
 import { MusicApp } from "./components/MusicApp";
 
-export const Ex09 = () => {
+export const Ex10 = () => {
   return (
     <div>
       <MusicApp />
-      {/* <IconEx /> */}
     </div>
   );
 };

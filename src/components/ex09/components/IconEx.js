@@ -5,7 +5,7 @@ export const IconEx = () => {
   return (
     <div>
       {/* <FontAwesomeIcon icon={faUserCircle} style={{ color: "salmon" }} /> */}
-      <FontAwesomeIcon icon="fa-solid fa-angle-down" />
+      {/* <FontAwesomeIcon icon="fa-solid fa-angle-down" /> */}
     </div>
   );
 };

@@ -6,7 +6,9 @@
 // import { FavSite } from "./components/ex04/FavSite";
 // import { ViewSite } from "./components/ex04/ViewSiteEx";
 // import { Ex05 } from "./components/ex05/Ex05";
-import { Ex06 } from "./components/ex06/Ex06";
+// import { Ex06 } from "./components/ex06/Ex06";
+// import { Ex09 } from "./components/ex09/Ex09";
+import { Ex10 } from "./components/ex10/Ex10";
 
 // 무조건 대문자로 시작
 const App = () => {
@@ -36,8 +38,17 @@ const App = () => {
       {/* <Ex05 /> */}
       {/* 5일차 */}
 
-      <Ex06 />
+      {/* <Ex06 /> */}
       {/* 6일차 */}
+
+      {/* Ex07 */}
+      {/* 7일차 */}
+
+      {/* <Ex09 /> */}
+      {/* 9일차 */}
+
+      <Ex10 />
+      {/* 10일차 */}
     </div>
   );
 };

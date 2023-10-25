@@ -11,6 +11,10 @@ export const fontSize = {
   desc: "16px", //문단
 };
 
+export const colors = {
+  darkGray: "#1d1d1d",
+};
+
 export const GlobalStyled = createGlobalStyle`
 ${reset}
 *{
