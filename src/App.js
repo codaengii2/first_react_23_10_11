@@ -9,7 +9,9 @@
 // import { Ex06 } from "./components/ex06/Ex06";
 // import { Ex09 } from "./components/ex09/Ex09";
 // import { Ex10 } from "./components/ex10/Ex10";
-import { Ex11 } from "./components/ex11/Ex11";
+// import { Ex11 } from "./components/ex11/Ex11";
+// import { Ex12 } from "./components/ex12/Ex12";
+import { Ex12_P } from "./components/ex12/Ex12_P";
 
 // 무조건 대문자로 시작
 const App = () => {
@@ -51,8 +53,12 @@ const App = () => {
       {/* <Ex10 /> */}
       {/* 10일차 */}
 
-      <Ex11 />
+      {/* <Ex11 /> */}
       {/* 11일차 */}
+
+      {/* <Ex12 /> */}
+      <Ex12_P />
+      {/* 12일차 */}
     </div>
   );
 };
