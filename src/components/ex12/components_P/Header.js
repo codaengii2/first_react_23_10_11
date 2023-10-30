@@ -30,10 +30,10 @@ export const Header = () => {
       </Logo>
       <Nav>
         <li>
-          <Link to={"/Sub01"}>메뉴1</Link>
+          <Link to={"/Sub/0"}>메뉴1</Link>
         </li>
         <li>
-          <Link to={"/Sub02"}>메뉴2</Link>
+          <Link to={"/Sub/1"}>메뉴2</Link>
         </li>
       </Nav>
     </SHeader>
