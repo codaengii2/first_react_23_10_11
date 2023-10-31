@@ -11,7 +11,8 @@
 // import { Ex10 } from "./components/ex10/Ex10";
 // import { Ex11 } from "./components/ex11/Ex11";
 // import { Ex12 } from "./components/ex12/Ex12";
-import { Ex12_P } from "./components/ex12/Ex12_P";
+// import { Ex12_P } from "./components/ex12/Ex12_P";
+import { Ex14 } from "./components/ex14/Ex14";
 
 // 무조건 대문자로 시작
 const App = () => {
@@ -57,8 +58,11 @@ const App = () => {
       {/* 11일차 */}
 
       {/* <Ex12 /> */}
-      <Ex12_P />
+      {/* <Ex12_P /> */}
       {/* 12일차 */}
+
+      <Ex14 />
+      {/* 14일차 */}
     </div>
   );
 };
