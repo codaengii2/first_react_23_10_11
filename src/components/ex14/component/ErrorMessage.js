@@ -7,6 +7,6 @@ const EMessage = styled.div`
   margin-top: 2px;
 `;
 
-export const ErrorMessage = ({ message }) => {
-  return <EMessage>{message}</EMessage>;
+export const ErrorMessage = ({ text }) => {
+  return <EMessage>{text}</EMessage>;
 };

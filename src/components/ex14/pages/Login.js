@@ -45,17 +45,24 @@ const Button = styled.button`
   font-size: 18px;
   font-weight: 600;
   color: #fff;
+  opacity: ${(props) => (props.$isActive ? 1 : 0.5)};
+  cursor: ${(props) => (props.$isActive ? "pointer" : "default")};
 `;
 
 export const Login = () => {
   const {
     register,
     handleSubmit,
-    formState: { errors },
-  } = useForm();
+    formState: { errors, isValid },
+  } = useForm({
+    mode: "onChange", //기본값으로 적용됨 매번 값을 갱신시킴
+  });
+
+  // console.log(isValid);
+  // => 유효성 검사 후 boolean값으로 반환함
 
   //   console.log(errors && errors.username && errors.username.message);
-  console.log(errors?.username?.message);
+  // console.log(errors?.username?.message);
   // 옵셔널 체이닝 연산자
   // => &&연산자로 객체에 접근하는 것 보다 옵셔널 체이닝(Optional chaining)을 이용하여
   // 객체 안에 있는 객체를 쉽게 접근할 수 있음
@@ -78,17 +85,28 @@ export const Login = () => {
           type="text"
           placeholder="아이디"
         />
-        <ErrorMessage message={errors?.username?.message} />
+        <ErrorMessage text={errors?.username?.message} />
         <Input
           {...register("password", {
-            required: "패스워드까지 작성해주세요",
+            required: "패스워드까지 작성해주세요.",
+            minLength: {
+              value: 8,
+              message: "비밀번호는 8자리 이상 작성해주세요.",
+            },
+            pattern: {
+              value:
+                /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/,
+              message: "숫자와 문자, 특수문자를 혼합해서 사용가능",
+            },
+            // /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/,
+            //=> 정규식 표현 Regexp
           })}
           type="password"
           placeholder="패스워드"
         />
-        <ErrorMessage message={errors?.password?.message} />
+        <ErrorMessage text={errors?.password?.message} />
 
-        <Button>로그인</Button>
+        <Button $isActive={isValid}>로그인</Button>
       </Form>
     </Wrap>
   );
@@ -99,3 +117,22 @@ export const Login = () => {
 //... 스프레드 연산자
 
 //e.preventDefault 자동
+
+// *useForm
+// => 폼 관련 패키지
+// ex)
+// const {
+//   register, // input 태그 name 및 등록 역할
+//   handleSubmit, // form 태그 이벤트 등록
+//   formState: {errors, isValid} //form 상태를 관리
+//  errors: form 유효성 검사 후 에러를 객체로 변환함,
+//  isValid: form 상태가 유효한지 boolean값으로 반환
+// } = useForm({
+// mode: "onChange"// form 모드로 유효성 검사를 어떻게 처리할지 값은 작성할 수 있음
+//});
+
+{
+  /* <input {register, ("name명",{
+  required: "" //현 input값이 필수값인지 아닌지 boolean값 및 문자열로 작성가능
+})} /> */
+}
