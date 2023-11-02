@@ -27,6 +27,9 @@ a{
   text-decoration: none;
   color: #1d1d1d;
 }
+ul,li{
+  list-style: none;
+}
 `;
 
 // => 전체 영역에서 사용할수 있는 스타일 처리법

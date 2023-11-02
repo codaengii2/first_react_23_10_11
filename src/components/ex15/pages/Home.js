@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const Wrap = styled.div`
@@ -43,8 +44,12 @@ export const Home = () => {
     <Wrap>
       <Container>
         <Title>환영합니다</Title>
-        <Button>로그인하기</Button>
-        <Button>회원가입하기</Button>
+        <Button>
+          <Link to={"/login/0"}>로그인하기</Link>
+        </Button>
+        <Button>
+          <Link to={"/login/1"}>회원가입하기</Link>
+        </Button>
       </Container>
     </Wrap>
   );

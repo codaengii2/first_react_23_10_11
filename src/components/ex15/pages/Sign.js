@@ -1,21 +1,21 @@
 import styled from "styled-components";
+import { data } from "../api";
 
 const Wrap = styled.div``;
-const Form = styled.form``;
+const Form = styled.div``;
 const Title = styled.div``;
-const Input = styled.input``;
-const Button = styled.button``;
-
+const Input = styled.div``;
+const Button = styled.div``;
 export const Sign = () => {
   return (
     <Wrap>
       <Form>
-        <Title>회원가입</Title>
-        <Input type="text" placeholder="이름" />
-        <Input type="text" placeholder="아이디" />
-        <Input type="password" placeholder="패스워드" />
-        <Input type="email" placeholder="이메일" />
-        <Button>가입하기</Button>
+        <Title>{data[1].title}</Title>
+
+        <Input type="text" placeholder={data[1].userid} />
+        <Input type="password" placeholder={data[1].userpassword} />
+
+        <Button>{data[1].button}</Button>
       </Form>
     </Wrap>
   );

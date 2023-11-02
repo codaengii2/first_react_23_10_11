@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import styled from "styled-components";
+import { data } from "../api";
 
 const Wrap = styled.div`
   height: 100vh;
@@ -52,10 +53,12 @@ export const Login = () => {
   return (
     <Wrap>
       <Form>
-        <Title>LOGIN</Title>
-        <Input type="text" placeholder="아이디" />
-        <Input type="password" placeholder="비밀번호" />
-        <Button>로그인</Button>
+        <Title>{data[id].title}</Title>
+        <Input type="text" placeholder={data[id].username} />
+        <Input type="text" placeholder={data[id].userid} />
+        <Input type="password" placeholder={data[id].userpassword} />
+        <Input type="email" placeholder={data[id].useremail} />
+        <Button>{data[id].button}</Button>
       </Form>
     </Wrap>
   );
