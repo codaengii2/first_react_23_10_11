@@ -13,7 +13,7 @@
 // import { Ex12 } from "./components/ex12/Ex12";
 // import { Ex12_P } from "./components/ex12/Ex12_P";
 // import { Ex14 } from "./components/ex14/Ex14";
-import { Ex15 } from "./components/ex15/Ex15";
+// import { Ex15 } from "./components/ex15/Ex15";
 import { Ex17 } from "./components/ex17/Ex17";
 
 // 무조건 대문자로 시작
